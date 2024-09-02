@@ -21,7 +21,7 @@ class SRCNN:
         return model
 
     def train(self, lr_images, hr_images, epochs=100, batch_size=4):
-        self.model.fit(lr_images, hr_images, epochs=epochs, batch_size=batch_size, validation_split=0.1)
+        return self.model.fit(lr_images, hr_images, epochs=epochs, batch_size=batch_size, validation_split=0.1)
 
     def predict(self, lr_image):
         return self.model.predict(lr_image)
